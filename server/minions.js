@@ -1,5 +1,7 @@
 const minionsRouter = require('express').Router();
 
+
+
 const {
     addToDatabase,
     getAllFromDatabase,
@@ -15,7 +17,7 @@ minionsRouter.param('minionId', (req, res, next, id) => {
         req.minion = minion;
         next();
     } else {
-        res.status(404).send;
+        res.status(404).send();
     }
 });
 
